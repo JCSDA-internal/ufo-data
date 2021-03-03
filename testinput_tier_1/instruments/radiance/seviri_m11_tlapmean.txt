@@ -1,0 +1,8 @@
+seviri_m11 4 0.107064E+01
+seviri_m11 5 0.801496E+01
+seviri_m11 6 0.629940E+01
+seviri_m11 7 0.112589E+01
+seviri_m11 8 -0.993364E+00
+seviri_m11 9 0.105089E+01
+seviri_m11 10 0.144525E+01
+seviri_m11 11 0.380681E+01

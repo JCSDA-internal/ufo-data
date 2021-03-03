@@ -1,0 +1,3 @@
+avhrr3_metop-a 3 0.723880E+00
+avhrr3_metop-a 4 0.874739E+00
+avhrr3_metop-a 5 0.116799E+01

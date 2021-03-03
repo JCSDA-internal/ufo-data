@@ -1,0 +1,15 @@
+amsua_aqua 1 0.000000E+00
+amsua_aqua 2 0.000000E+00
+amsua_aqua 3 0.154825E+01
+amsua_aqua 4 0.000000E+00
+amsua_aqua 5 0.000000E+00
+amsua_aqua 6 0.466603E+01
+amsua_aqua 7 0.385938E+01
+amsua_aqua 8 0.258090E+01
+amsua_aqua 9 -0.843284E+00
+amsua_aqua 10 -0.261056E+01
+amsua_aqua 11 -0.404199E+01
+amsua_aqua 12 -0.592845E+01
+amsua_aqua 13 -0.779116E+01
+amsua_aqua 14 -0.558031E+01
+amsua_aqua 15 0.796183E+00
