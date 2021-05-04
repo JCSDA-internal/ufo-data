@@ -1,0 +1,10 @@
+StringVar@MetaData,air_pressure@MetaData,longitude@MetaData,air_temperature@ErrorVariance
+string,int,float,float
+South America,0,30,1
+South America,0,60,2
+South America,100000,30,3
+South America,100000,60,4
+North America,0,30,5
+North America,0,60,6
+North America,100000,30,7
+North America,100000,60,8
