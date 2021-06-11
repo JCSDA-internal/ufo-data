@@ -1,0 +1,10 @@
+StringVar@MetaData,air_pressure@MetaData,longitude@MetaData,air_temperature@ErrorVariance
+string,int,float,float
+south,0,30,1
+south,0,60,2
+south,100000,30,3
+south,100000,60,4
+north,0,30,5
+north,0,60,6
+north,100000,30,7
+north,100000,60,8

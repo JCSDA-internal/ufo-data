@@ -1,0 +1,3 @@
+StringVar@MetaData,air_pressure@MetaData,longitude@MetaData,air_temperature@ErrorVariance
+string,int,float
+abc,10,15.5,0.1
