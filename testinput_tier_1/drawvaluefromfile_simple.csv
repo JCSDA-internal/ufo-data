@@ -1,0 +1,7 @@
+string_variable_1@MetaData,int_variable_1@MetaData,latitude@MetaData,longitude@MetaData,result@IntResult,result@StringResult
+string,int,float,float,int,string
+ABC,1,-2.5,11.25,1,ABC
+_,2,2.4,15.7,75,XYZ
+PQR,4,100,100,75,XYZ
+MNO,5,2.5,15.75,5,MNO
+
