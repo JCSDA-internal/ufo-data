@@ -9,4 +9,4 @@
 
 cmake_minimum_required( VERSION 3.3.2 FATAL_ERROR )
 
-project( ufo_data VERSION 1.1.0 DESCRIPTION "UFO Test Files" )
+project( ufo_data VERSION 1.2.0 DESCRIPTION "UFO Test Files" )
