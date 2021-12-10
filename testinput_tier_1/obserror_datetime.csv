@@ -1,4 +1,4 @@
-datetime@MetaData,air_temperature@ErrorVariance
+dateTime@MetaData,air_temperature@ErrorVariance
 datetime,int
 2010-01-03T12:00:00Z,1
 2010-01-04T00:00:00Z,2
