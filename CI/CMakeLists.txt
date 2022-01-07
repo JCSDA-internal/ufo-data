@@ -19,7 +19,7 @@ set( ENABLE_MPI ON CACHE BOOL "Compile with MPI" )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT jedicmake GIT "https://github.com/JCSDA-internal/jedi-cmake.git" BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT jedicmake GIT "https://github.com/JCSDA-internal/jedi-cmake.git" )
 include( jedicmake/cmake/Functions/git_functions.cmake )
 
 # ECMWF libs
@@ -44,7 +44,7 @@ ecbuild_bundle( PROJECT ufo-data GIT "https://github.com/JCSDA-internal/ufo-data
 # Build IODA converters
 option(BUILD_IODA_CONVERTERS "Build IODA Converters" OFF)
 if(BUILD_IODA_CONVERTERS)
-  ecbuild_bundle( PROJECT iodaconv GIT "https://github.com/JCSDA-internal/ioda-converters.git" BRANCH develop UPDATE )
+  ecbuild_bundle( PROJECT iodaconv GIT "https://github.com/JCSDA-internal/ioda-converters.git" )
 endif()
 
 # Build Doxygen documentation
