@@ -73,10 +73,7 @@ phases:
       # ufo-test
       - ./clone.sh $GIT_USER $GIT_PASS jcsda-internal/ufo-data $CODEBUILD_GIT_BRANCH ufo-data /jcsda/ioda-bundle develop
 
-      - ls
-      - pwd
-      - echo ${CODEBUILD_SRC_DIR}
-      - cp ${CODEBUILD_SRC_DIR}/CI/CMakeLists.txt /jcsda/ioda-bundle
+      - cp CMakeLists.txt /jcsda/ioda-bundle
       - cp -r cmake /jcsda/ioda-bundle/
       # cdash upload setup
       - cp /jcsda/ioda-bundle/cmake/CTestConfig.cmake /jcsda/ioda-bundle
