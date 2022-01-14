@@ -30,8 +30,14 @@ list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satbias(.*)" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)interpolation(.*)" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_multi_variant(.*)" )
 
-
-list( LENGTH OBS_FILES OBS_FILES_LEN )
+# Remove known buggy non-obs files
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)met_office_gauss_thinning_groundgnssnames_obs.nc4" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_4d.nc" )  # Wrong dimension attachment
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_2d_fullr.nc" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_latitude_longitude.nc" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors.nc4" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)scatwind_obs_2d_2020100106.nc4" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)superob_testdata.nc4" )
 
 foreach ( f ${OBS_FILES} )
 	get_filename_component(filename ${f} NAME)
@@ -47,9 +53,6 @@ foreach ( f ${OBS_FILES} )
 		)
 endforeach()
 
-
-
-# Data file "installation" and project CMake exports
 
 
 ecbuild_print_summary()
