@@ -22,8 +22,9 @@ set( CMAKE_DIRECTORY_LABELS ${PROJECT_NAME} )
 find_package(ioda REQUIRED)
 
 file( GLOB_RECURSE OBS_FILES *.nc4 *.nc *.ioda )
-# We filter the expression to remove the geovals
+# We filter the expression to remove the geovals and obsdiag files, which are geovals-based
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)geoval(.*)" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obsdiag(.*)" )
 # Remove satbias files
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satbias(.*)" )
 # Remove misc test files
