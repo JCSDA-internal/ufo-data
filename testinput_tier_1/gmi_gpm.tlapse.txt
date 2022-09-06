@@ -1,0 +1,13 @@
+gmi_gpm 1 0.959170E-01
+gmi_gpm 2 0.959346E-01
+gmi_gpm 3 0.281584E+00
+gmi_gpm 4 0.282214E+00
+gmi_gpm 5 0.703770E+00
+gmi_gpm 6 0.524242E+00
+gmi_gpm 7 0.525367E+00
+gmi_gpm 8 0.102991E+01
+gmi_gpm 9 0.103257E+01
+gmi_gpm 10 0.225625E+01
+gmi_gpm 11 0.225285E+01
+gmi_gpm 12 0.722202E+01
+gmi_gpm 13 0.396073E+01
