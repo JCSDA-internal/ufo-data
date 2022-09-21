@@ -51,7 +51,6 @@ phases:
       - mkdir /build_container
 
       - git lfs install # creates .gitconfig
-      #- cp ~/.gitconfig .
       - cd CI
 
       #  Setting git credentials
