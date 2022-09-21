@@ -29,7 +29,6 @@ phases:
       # Codebuild only runs on PUSH events if HEAD_REF
       # is refs/heads/develop (merge to develop). In this
       # case CODEBUILD_GIT_BRANCH="develop"
-
       - if [ "$CODEBUILD_WEBHOOK_EVENT" = "PUSH" ];
         then export CODEBUILD_GIT_BRANCH="develop";
         echo "Merging to develop";
@@ -47,17 +46,11 @@ phases:
   pre_build:
     commands:
       - echo Executing pre_build phase
-      - git lfs install # creates .gitconfig
-      - cp ~/.gitconfig .
       - mkdir /build_container
       - mkdir /jcsda
 
-
-      # Upload branch name and commit sha as CodeBuild artifact to S3
-      - mkdir -p /jcsda/artifacts
-      - echo ${CODEBUILD_GIT_BRANCH} > /jcsda/artifacts/branch_name.txt
-      - echo ${CODEBUILD_RESOLVED_SOURCE_VERSION} > /jcsda/artifacts/commit_sha.txt
-
+      - git lfs install # creates .gitconfig
+      #- cp ~/.gitconfig .
       - cd CI
 
       #  Setting git credentials
@@ -68,8 +61,11 @@ phases:
       - chmod 0700 ~/.git-credentials
       - echo "https://${GIT_USER}:${GIT_PASS}@github.com" >~/.git-credentials
 
-      # jedi-cmake
-      - ./clone.sh jcsda-internal/jedi-cmake $CODEBUILD_GIT_BRANCH /jcsda/ioda-bundle jedicmake ${GIT_BASE_BRANCH} develop
+
+      # Upload branch name and commit sha as CodeBuild artifact to S3
+      - mkdir -p /jcsda/artifacts
+      - echo ${CODEBUILD_GIT_BRANCH} > /jcsda/artifacts/branch_name.txt
+      - echo ${CODEBUILD_RESOLVED_SOURCE_VERSION} > /jcsda/artifacts/commit_sha.txt
 
       # ioda
       - ./clone.sh jcsda-internal/ioda $CODEBUILD_GIT_BRANCH /jcsda/ioda-bundle ioda ${GIT_BASE_BRANCH} develop
@@ -104,6 +100,7 @@ phases:
 
       # configure and build
       - cd /build_container
+      - source /etc/profile.d/z10_spack_environment.sh
       - ecbuild -Wno-dev -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCDASH_OVERRIDE_SITE=CodeBuild -DCDASH_OVERRIDE_SYSTEM_NAME=ClangContainer -DUFO_TEST_TIER=2 -DCDASH_OVERRIDE_GIT_BRANCH=$CODEBUILD_GIT_BRANCH -DCTEST_UPDATE_VERSION_ONLY=FALSE /jcsda/ioda-bundle
       - cd /build_container/ioda
       - cp ../DartConfiguration.tcl .
