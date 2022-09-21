@@ -1,6 +1,7 @@
 version: 0.2
 
 env:
+  shell: bash
   parameter-store:
     GIT_USER: "/CodeBuild/Git_USER"
     GIT_PASS: "/CodeBuild/Git_PASS"
@@ -46,8 +47,8 @@ phases:
   pre_build:
     commands:
       - echo Executing pre_build phase
-      - mkdir /build_container
       - mkdir /jcsda
+      - mkdir /build_container
 
       - git lfs install # creates .gitconfig
       #- cp ~/.gitconfig .
@@ -79,12 +80,12 @@ phases:
       # ufo-test
       - ./clone.sh jcsda-internal/ufo-data $CODEBUILD_GIT_BRANCH /jcsda/ioda-bundle ufo-data ${GIT_BASE_BRANCH} develop
 
+      # move CMakeLists.txt from ufo-data/CI to bundle directory
       - cp CMakeLists.txt /jcsda/ioda-bundle
       - cp -r cmake /jcsda/ioda-bundle/
       # cdash upload setup
       - cp /jcsda/ioda-bundle/cmake/CTestConfig.cmake /jcsda/ioda-bundle
       - sed -i "s@CDASH_URL@$CDASH_URL@g" /jcsda/ioda-bundle/CTestConfig.cmake
-
 
       - chmod 777 -R /jcsda/ioda-bundle
       - cd /jcsda/ioda-bundle
@@ -94,12 +95,13 @@ phases:
     on-failure: CONTINUE
     commands:
       - echo Executing build phase
-      - echo $CODEBUILD_BUILD_SUCCEEDING
       - export BUILD_STATUS="0"
       - echo $BUILD_STATUS
+      - echo $CODEBUILD_BUILD_SUCCEEDING
 
       # configure and build
       - cd /build_container
+      - ls /etc/profile.d/
       - source /etc/profile.d/z10_spack_environment.sh
       - ecbuild -Wno-dev -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCDASH_OVERRIDE_SITE=CodeBuild -DCDASH_OVERRIDE_SYSTEM_NAME=ClangContainer -DUFO_TEST_TIER=2 -DCDASH_OVERRIDE_GIT_BRANCH=$CODEBUILD_GIT_BRANCH -DCTEST_UPDATE_VERSION_ONLY=FALSE /jcsda/ioda-bundle
       - cd /build_container/ioda
