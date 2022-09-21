@@ -51,7 +51,6 @@ phases:
       - mkdir /build_container
 
       - git lfs install # creates .gitconfig
-      #- cp ~/.gitconfig .
       - cd CI
 
       #  Setting git credentials
@@ -101,7 +100,6 @@ phases:
 
       # configure and build
       - cd /build_container
-      - ls /etc/profile.d/
       - source /etc/profile.d/z10_spack_environment.sh
       - ecbuild -Wno-dev -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCDASH_OVERRIDE_SITE=CodeBuild -DCDASH_OVERRIDE_SYSTEM_NAME=ClangContainer -DUFO_TEST_TIER=2 -DCDASH_OVERRIDE_GIT_BRANCH=$CODEBUILD_GIT_BRANCH -DCTEST_UPDATE_VERSION_ONLY=FALSE /jcsda/ioda-bundle
       - cd /build_container/ioda
