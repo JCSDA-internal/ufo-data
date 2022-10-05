@@ -19,20 +19,9 @@ set( ENABLE_MPI ON CACHE BOOL "Compile with MPI" )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT jedicmake GIT "https://github.com/JCSDA-internal/jedi-cmake.git" )
-include( jedicmake/cmake/Functions/git_functions.cmake )
-
-# ECMWF libs
-# ----------
-option("BUNDLE_SKIP_ECKIT" "Don't build eckit" "ON" ) # Skip eckit build unless user passes -DBUNDLE_SKIP_ECKIT=OFF
-option("BUNDLE_SKIP_FCKIT" "Don't build fckit" "ON") # Skip fckit unless user passes -DBUNDLE_SKIP_FCKIT=OFF
-option("BUNDLE_SKIP_ATLAS" "Don't build atlas" "ON") # Skip atlas unless user passes -DBUNDLE_SKIP_ATLAS=OFF
-option("BUNDLE_SKIP_ODC" "Don't build odc" "ON") # Skip odc unless user passes -DBUNDLE_SKIP_ODC=OFF
-
-ecbuild_bundle( PROJECT eckit GIT "https://github.com/ecmwf/eckit.git" TAG 1.18.2 )
-ecbuild_bundle( PROJECT fckit GIT "https://github.com/ecmwf/fckit.git" TAG 0.9.5 )
-ecbuild_bundle( PROJECT atlas GIT "https://github.com/ecmwf/atlas.git" TAG 0.27.0 )
-ecbuild_bundle( PROJECT odc GIT "https://github.com/ecmwf/odc.git" TAG 1.4.4 )
+#ecbuild_bundle( PROJECT jedicmake GIT "https://github.com/JCSDA-internal/jedi-cmake.git" )
+#include( jedicmake/cmake/Functions/git_functions.cmake )
+include( /opt/view/share/jedicmake/Functions/git_functions.cmake )
 
 # Core JEDI repositories
 ecbuild_bundle( PROJECT oops GIT "https://github.com/JCSDA-internal/oops.git" )
