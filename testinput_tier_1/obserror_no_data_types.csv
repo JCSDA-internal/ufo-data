@@ -1,1 +1,1 @@
-StringVar@MetaData,air_pressure@MetaData,longitude@MetaData,air_temperature@ErrorVariance
+StringVar@MetaData,air_pressure@ObsValue,longitude@MetaData,air_temperature@ErrorVariance
