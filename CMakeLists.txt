@@ -50,7 +50,10 @@ foreach ( f ${OBS_FILES} )
 		COMMAND ioda-validate.x
 		LABELS ufo_data_validate
 		ENVIRONMENT "ECKIT_COLOUR_OUTPUT=1"
-		ARGS "${IODA_YAML_ROOT}/validation/ObsSpace.yaml" "${f}"
+		ARGS "--ignore-warn"
+                     "--ignore-error"
+                     "${IODA_YAML_ROOT}/validation/ObsSpace.yaml"
+                     "${f}"
 		)
 endforeach()
 
