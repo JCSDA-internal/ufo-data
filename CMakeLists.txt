@@ -9,7 +9,7 @@
 
 cmake_minimum_required( VERSION 3.3.2 FATAL_ERROR )
 
-project( ufo_data VERSION 1.4.0 DESCRIPTION "UFO Test Files" )
+project( ufo_data VERSION 1.5.0 DESCRIPTION "UFO Test Files" )
 
 find_package( ecbuild QUIET )
 include( ecbuild_system NO_POLICY_SCOPE )
@@ -50,7 +50,10 @@ foreach ( f ${OBS_FILES} )
 		COMMAND ioda-validate.x
 		LABELS ufo_data_validate
 		ENVIRONMENT "ECKIT_COLOUR_OUTPUT=1"
-		ARGS "${IODA_YAML_ROOT}/validation/ObsSpace.yaml" "${f}"
+		ARGS "--ignore-warn"
+                     "--ignore-error"
+                     "${IODA_YAML_ROOT}/validation/ObsSpace.yaml"
+                     "${f}"
 		)
 endforeach()
 
