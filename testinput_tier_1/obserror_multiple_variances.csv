@@ -1,3 +1,3 @@
-StringVar@MetaData,air_pressure@MetaData,air_temperature@ErrorVariance,air_temperature@ErrorVariance,specific_humidity@ErrorVariance
+MetaData/stringVar,MetaData/pressure,ErrorVariance/airTemperature,ErrorVariance/airTemperature,ErrorVariance/specificHumidity
 string,int,float,float,float
 south,0,30,1,3
