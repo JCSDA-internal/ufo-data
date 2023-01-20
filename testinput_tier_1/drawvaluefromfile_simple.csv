@@ -1,4 +1,4 @@
-string_variable_1@MetaData,int_variable_1@MetaData,float_variable_1@MetaData,latitude@MetaData,longitude@MetaData,result@IntResult,result@StringResult
+MetaData/string_variable_1,MetaData/int_variable_1,MetaData/float_variable_1,MetaData/latitude,MetaData/longitude,IntResult/result,StringResult/result
 string,int,float,float,float,int,string
 ABC,1,2.0,-2.5,11.25,1,ABC
 _,2,4.0,2.4,15.7,75,XYZ

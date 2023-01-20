@@ -1,2 +1,2 @@
-StringVar@MetaData,air_pressure@MetaData,longitude@MetaData,air_temperature@ErrorVariance
+MetaData/stringVar,MetaData/pressure,MetaData/longitude,ErrorVariance/airTemperature
 string,int,float,float
