@@ -9,7 +9,7 @@
 
 cmake_minimum_required( VERSION 3.3.2 FATAL_ERROR )
 
-project( ufo_data VERSION 1.6.0 DESCRIPTION "UFO Test Files" )
+project( ufo_data VERSION 1.7.0 DESCRIPTION "UFO Test Files" )
 
 find_package( ecbuild QUIET )
 include( ecbuild_system NO_POLICY_SCOPE )
