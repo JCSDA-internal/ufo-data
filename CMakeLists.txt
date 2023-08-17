@@ -37,6 +37,7 @@ list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_4d.nc" )  # Wrong dimension a
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_2d_fullr.nc" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)obserror_latitude_longitude.nc" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors.nc4" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors_nomissing.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)scatwind_obs_2d_2020100106.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)superob_testdata.nc4" )
 
