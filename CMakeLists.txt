@@ -7,7 +7,7 @@
 # UFO Test Files
 ################################################################################
 
-cmake_minimum_required( VERSION 3.3.2 FATAL_ERROR )
+cmake_minimum_required( VERSION 3.12 )
 
 project( ufo_data VERSION 1.10.0 DESCRIPTION "UFO Test Files" )
 
