@@ -67,6 +67,8 @@ def get_dictionary():
     d["vwind_at_10m"] = "northward_wind_at_10m"
     d["eastward_wind_10m"] = "eastward_wind_at_10m"
     d["northward_wind_10m"] = "northward_wind_at_10m"
+    d["surface_wind_speed"] =  "wind_speed_at_surface"
+    d["surface_wind_from_direction"] =  "wind_from_direction_at_surface"
     return d
 
 if __name__ == '__main__':
