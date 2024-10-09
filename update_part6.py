@@ -62,10 +62,10 @@ if __name__ == '__main__':
 
     # Change variable name in NetCDF/HDF5 file
     # -------------------------------------------------------------------------------
-    workingDir = ["/Users/annash/Documents/jedi/code/jedi-bundle/ufo-data/."]
+    workingDir = ["./"]
     renameVariableInDataFile(workingDir, "surface_temperature", "air_temperature_at_2m")
-    renameVariableInDataFile(workingDir, "surface_temperature_where_sea", "surface_skin_temperature_where_sea")
-    renameVariableInDataFile(workingDir, "surface_temperature_where_land", "surface_skin_temperature_where_land")
-    renameVariableInDataFile(workingDir, "surface_temperature_where_ice", "surface_skin_temperature_where_ice")
-    renameVariableInDataFile(workingDir, "surface_temperature_where_snow", "surface_skin_temperature_where_snow")
-    renameVariableInDataFile(workingDir, "skin_temperature", "surface_skin_temperature")
+    renameVariableInDataFile(workingDir, "surface_temperature_where_sea", "skin_temperature_at_surface_where_sea")
+    renameVariableInDataFile(workingDir, "surface_temperature_where_land", "skin_temperature_at_surface_where_land")
+    renameVariableInDataFile(workingDir, "surface_temperature_where_ice", "skin_temperature_at_surface_where_ice")
+    renameVariableInDataFile(workingDir, "surface_temperature_where_snow", "skin_temperature_at_surface_where_snow")
+    renameVariableInDataFile(workingDir, "skin_temperature", "skin_temperature_at_surface")
