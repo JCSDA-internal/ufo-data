@@ -96,7 +96,8 @@ if __name__ == '__main__':
              "aircraft_geoval_2018041500_m.nc4", "geovals_radar_mrms_202205122200.nc",
              "gsisfc_tsen_geoval_2018041500_m.nc4", "gsisfc_uv_geoval_2018041500_m.nc4", "sondes_background_error_vert_interp_air_pressure_geoval_2018041500_s.nc4",
              "sondes_background_error_vert_interp_height_geoval_2018041500_s.nc4", "geovals-mpas.mrms_reflectivity.20220216T000000Z_s.nc",
-             "aircraft_geoval_2018041500_s.nc4", "groundgnss_geovals_20191230T0600Z.nc4"]
+             "aircraft_geoval_2018041500_s.nc4"]
+# groundgnss_geovals_20191230T0600Z.nc4
     renameVariableInList(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water", "water_vapor_mixing_ratio_wrt_moist_air", files)
 #    files = ["sondes_background_error_vert_interp_height_obsdiag_2018041500_s.nc4"]
 #    renameVariableInList(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_background_error", "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_background_error", files)
