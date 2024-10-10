@@ -87,7 +87,7 @@ if __name__ == '__main__':
     # List of variables to remove condensed water from
     files = ["gnssro_geoval_2018041500_1obs_bending_angle.nc4", "scatwind_geoval_2020121500_m.nc", "sfc_geoval_2020121500_m.nc", 
              "sfcship_geoval_2020121500_m.nc", "gnssro_geoval_2018041500_3prof.nc4", "rass_tv_geoval_2020121500.nc",
-             "aircraft_geoval_2020121500_m.nc", "sondes_geovals_2021121200_m.nc4", "scatwind_geovals_2021121200_m.nc4",
+             "sondes_geovals_2021121200_m.nc4", "scatwind_geovals_2021121200_m.nc4",
              "vadwind_geoval_2020121500.nc", "sfcship_geovals_2021121200_m.nc4", "pibal_geovals_2021121200_m.nc4",
              "pibal_geoval_2021121200_m.nc4", "satwind_geovals_2021121200_m.nc4", "aircraft_geovals_2021121200_m.nc4",
              "satwind_geoval_2020121500_m.nc", "sfc_geovals_2021121200_m.nc4", "sondes_geoval_2020121500_m.nc",
