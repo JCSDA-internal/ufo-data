@@ -83,10 +83,10 @@ if __name__ == '__main__':
     renameVariableInDataFile(workingDir, "specific_humidity", "water_vapor_mixing_ratio_wrt_moist_air")
     renameVariableInDataFile(workingDir, "specific_humidity_at_two_meters_above_surface", "water_vapor_mixing_ratio_wrt_moist_air_at_2m")
     renameVariableInDataFile(workingDir, "specific_humidity_background_error", "water_vapor_mixing_ratio_wrt_moist_air_background_error")
-    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water", "water_vapor_mixing_ratio_wrt_moist_air")
-    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m", "specific_humidity_at_two_meters_above_surface")
-    renameVariableInDataFile(workingDir, "specific_humidity_at_two_meters_above_surface", "water_vapor_mixing_ratio_wrt_moist_air_at_2m")
-    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_background_error", "water_vapor_mixing_ratio_wrt_moist_air_background_error")
+#    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water", "water_vapor_mixing_ratio_wrt_moist_air")
+#    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m", "specific_humidity_at_two_meters_above_surface")
+#    renameVariableInDataFile(workingDir, "specific_humidity_at_two_meters_above_surface", "water_vapor_mixing_ratio_wrt_moist_air_at_2m")
+#    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_background_error", "water_vapor_mixing_ratio_wrt_moist_air_background_error")
 
 #    # List of variables to remove condensed water from
 #    files = ["gnssro_geoval_2018041500_1obs_bending_angle.nc4", "scatwind_geoval_2020121500_m.nc", "sfc_geoval_2020121500_m.nc", 
