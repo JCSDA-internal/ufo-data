@@ -4,6 +4,7 @@ variables:
 - name: andate
 - name: antime
 - name: date
+- name: time
 - name: initial_obsvalue
 - name: lat
 - name: lon
@@ -11,3 +12,4 @@ variables:
 - name: receipt_date
 - name: receipt_time
 - name: seqno
+- name: varno

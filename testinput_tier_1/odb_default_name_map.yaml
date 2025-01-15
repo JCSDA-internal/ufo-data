@@ -792,6 +792,8 @@ varno-independent columns:
     source: "chans"
   - name: "MetaData/wetlandFraction"
     source: "indtn_and_wtld_fraction"
+  - name: "MetaData/stationACCombined"
+    source: "site_name"
 # Added specifically for ODB write
   - name: "MetaData/pressure"
     source: "initial_vertco_reference"
@@ -1026,8 +1028,3 @@ varno-dependent columns:
   - source: "dflag_thinned"
     group name: "DiagnosticFlags/Thinned"
     varno-to-variable-name mapping: *obsvalue_varnos
-complementary variables:
-  - output name: "MetaData/stationACCombined"
-    output variable data type: "string"
-    input names: ["site_name_1", "site_name_2", "site_name_3"]
-    merge method: "concat"
