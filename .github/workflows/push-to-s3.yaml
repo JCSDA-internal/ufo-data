@@ -36,7 +36,10 @@ jobs:
           LFS_BUCKET_AND_PATH: jcsda-usaf-ci-build-cache/lfs
         run: |
           export repository_name=$(basename $(pwd))
-          echo "repository_name=${repository_name}"
+          echo "Prep repo ${repository_name} for upload"
+          git fetch --all
+          git checkout develop
+          git config --local --remove-section 'http.https://github.com/'
           echo "Creating this tarball can take several minutes."
           cd ..
           tar -czf "${repository_name}.tar.gz" "${repository_name}"
