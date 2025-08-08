@@ -9,6 +9,7 @@ on:
   schedule:
     # 1:30 AM on the 1st and 15th day of each month.
     - cron: 30 1 1,15 * *
+  workflow_dispatch: {}
 
 jobs:
   upload:
@@ -33,10 +34,14 @@ jobs:
 
       - name: Create tarball and upload to s3
         env:
-          LFS_BUCKET_AND_PATH: jcsda-usaf-ci-build-cache/lfs
+          LFS_BUCKET: jcsda-public-rpays
         run: |
           export repository_name=$(basename $(pwd))
-          echo "Prep repo ${repository_name} for upload"
+          export org_name="${GITHUB_REPOSITORY_OWNER}"
+          export LFS_BUCKET_AND_PATH="${LFS_BUCKET}/${org_name}"
+          echo "Detected organization: ${org_name}"
+          echo "Uploading repository to s3://${LFS_BUCKET_AND_PATH}/${repository_name}.tar.gz"
+          echo "Preparing ${repository_name} for upload"
           git fetch --all
           git checkout develop
           git config --local --remove-section 'http.https://github.com/'
