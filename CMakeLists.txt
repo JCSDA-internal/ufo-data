@@ -8,8 +8,7 @@
 ################################################################################
 
 cmake_minimum_required( VERSION 3.12 )
-
-project( ufo_data VERSION 1.10.0 DESCRIPTION "UFO Test Files" )
+project( ufo-data VERSION 1.10.0 DESCRIPTION "UFO Test Files" )
 
 find_package( ecbuild QUIET )
 include( ecbuild_system NO_POLICY_SCOPE )
@@ -58,7 +57,5 @@ foreach ( f ${OBS_FILES} )
 		)
 endforeach()
 
-
-
+ecbuild_install_project( NAME ${PROJECT_NAME} )
 ecbuild_print_summary()
-
