@@ -39,6 +39,7 @@ list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors_nomissing.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)scatwind_obs_2d_2020100106.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)superob_testdata.nc4" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)mtgirs_obserror_fstest.nc4" )  # used with drawFromFile obsfunction
 
 foreach ( f ${OBS_FILES} )
 	get_filename_component(filename ${f} NAME)
