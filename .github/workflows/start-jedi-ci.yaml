@@ -46,4 +46,4 @@ jobs:
           target_repo_dir: target_repository
           bundle_branch: develop
           jedi_ci_token: ${{ steps.generate-token.outputs.token }}
-          unittest_dependencies: crtm ioda oops gsw ufo-data oasim ropp-ufo rttov
+          unittest_dependencies: crtm ioda ioda-data oops gsw ufo-data oasim ropp-ufo rttov
