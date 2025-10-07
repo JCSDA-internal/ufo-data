@@ -8,8 +8,7 @@
 ################################################################################
 
 cmake_minimum_required( VERSION 3.12 )
-
-project( ufo_data VERSION 1.10.0 DESCRIPTION "UFO Test Files" )
+project( ufo-data VERSION 1.10.0 DESCRIPTION "UFO Test Files" )
 
 find_package( ecbuild QUIET )
 include( ecbuild_system NO_POLICY_SCOPE )
@@ -40,6 +39,7 @@ list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)satwind_pressure_errors_nomissing.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)scatwind_obs_2d_2020100106.nc4" )
 list( FILTER OBS_FILES EXCLUDE REGEX "(.*)superob_testdata.nc4" )
+list( FILTER OBS_FILES EXCLUDE REGEX "(.*)mtgirs_obserror_fstest.nc4" )  # used with drawFromFile obsfunction
 
 foreach ( f ${OBS_FILES} )
 	get_filename_component(filename ${f} NAME)
@@ -58,7 +58,5 @@ foreach ( f ${OBS_FILES} )
 		)
 endforeach()
 
-
-
+ecbuild_install_project( NAME ${PROJECT_NAME} )
 ecbuild_print_summary()
-
