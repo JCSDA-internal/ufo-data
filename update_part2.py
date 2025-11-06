@@ -89,8 +89,8 @@ if __name__ == '__main__':
 #    renameVariableInDataFile(workingDir, "water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_background_error", "water_vapor_mixing_ratio_wrt_moist_air_background_error")
 
 #    # List of variables to remove condensed water from
-#    files = ["gnssro_geoval_2018041500_1obs_bending_angle.nc4", "scatwind_geoval_2020121500_m.nc", "sfc_geoval_2020121500_m.nc", 
-#             "sfcship_geoval_2020121500_m.nc", "gnssro_geoval_2018041500_3prof.nc4", "rass_tv_geoval_2020121500.nc",
+#    files = ["gnssro_geoval_2018041500_1obs_bending_angle.nc4",
+#             "gnssro_geoval_2018041500_3prof.nc4", "rass_tv_geoval_2020121500.nc",
 #             "sondes_geovals_2021121200_m.nc4", "scatwind_geovals_2021121200_m.nc4",
 #             "vadwind_geoval_2020121500.nc", "sfcship_geovals_2021121200_m.nc4", "pibal_geovals_2021121200_m.nc4",
 #             "pibal_geoval_2021121200_m.nc4", "satwind_geovals_2021121200_m.nc4", "aircraft_geovals_2021121200_m.nc4",
