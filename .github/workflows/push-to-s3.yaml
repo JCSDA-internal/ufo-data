@@ -1,0 +1,52 @@
+# On push to develop this workflow will create a tarball of the repository
+# and push it to the s3 path defined by LFS_BUCKET_AND_PATH. This tarball is
+# used by our testing infrastructure to save GitLFS bandwidth.
+
+on:
+  push:
+    branches:
+      - develop
+  schedule:
+    # 1:30 AM on the 1st and 15th day of each month.
+    - cron: 30 1 1,15 * *
+  workflow_dispatch: {}
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # This role only has the permission to write to our lfs archive s3 bucket path.
+          role-to-assume: arn:aws:iam::747101682576:role/github-git-lfs-archive-writer
+          aws-region: us-east-2
+
+      - name: Create tarball and upload to s3
+        env:
+          LFS_BUCKET: jcsda-public-rpays
+        run: |
+          export repository_name=$(basename $(pwd))
+          export org_name="${GITHUB_REPOSITORY_OWNER}"
+          export LFS_BUCKET_AND_PATH="${LFS_BUCKET}/${org_name}"
+          echo "Detected organization: ${org_name}"
+          echo "Uploading repository to s3://${LFS_BUCKET_AND_PATH}/${repository_name}.tar.gz"
+          echo "Preparing ${repository_name} for upload"
+          git fetch --all
+          git checkout develop
+          git config --local --remove-section 'http.https://github.com/'
+          echo "Creating this tarball can take several minutes."
+          cd ..
+          tar -czf "${repository_name}.tar.gz" "${repository_name}"
+          echo "Uploading to s3"
+          aws s3 cp "${repository_name}.tar.gz" "s3://${LFS_BUCKET_AND_PATH}/${repository_name}.tar.gz" --no-progress
