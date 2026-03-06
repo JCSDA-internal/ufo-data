@@ -1093,7 +1093,7 @@
   obs_errors = 0.200E+00, 0.800E-01, 0.150E-01, 0.150E-01
 /
 !
-! This entry is for satellite 522 (known as FY-3C), taken from processing centre 38
+! This entry is for satellite 522 (known as FY-3C), taken from processing centre 38 (CMA)
 !
 &GPSRO_ob_error
   satid = 522
@@ -1150,7 +1150,7 @@
   obs_errors = 0.200E+00, 0.800E-01, 0.200E-01, 0.200E-01
 /
 !
-! This entry is for satellite 523 (known as FY-3D), taken from processing centre 38
+! This entry is for satellite 523 (known as FY-3D), taken from processing centre 38 (CMA)
 !
 &GPSRO_ob_error
   satid = 523
