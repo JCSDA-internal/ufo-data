@@ -9,7 +9,7 @@
 ! The entries are given as relative errors (percentage error of the observation
 ! divided by the background bending angle).
 !
-! This entry is for satellite 3 (known as Metop-B (DMI)), taken from processing centre 94
+! This entry is for satellite 3 (known as Metop-B), taken from processing centre 94 (DMI)
 !
 &GPSRO_ob_error
   satid = 3
@@ -84,7 +84,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 4 (known as Metop-A (DMI)), taken from processing centre 94
+! This entry is for satellite 4 (known as Metop-A), taken from processing centre 94 (DMI)
 !
 &GPSRO_ob_error
   satid = 4
@@ -159,7 +159,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 5 (known as Metop-C (DMI)), taken from processing centre 94
+! This entry is for satellite 5 (known as Metop-C), taken from processing centre 94 (DMI)
 !
 &GPSRO_ob_error
   satid = 5
@@ -234,7 +234,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 3 (known as Metop-B (EUMETSAT)), taken from processing centre 254
+! This entry is for satellite 3 (known as Metop-B), taken from processing centre 254 (EUMETSAT)
 !
 &GPSRO_ob_error
   satid = 3
@@ -309,7 +309,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 4 (known as Metop-A (EUMETSAT)), taken from processing centre 254
+! This entry is for satellite 4 (known as Metop-A), taken from processing centre 254 (EUMETSAT)
 !
 &GPSRO_ob_error
   satid = 4
@@ -384,7 +384,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 5 (known as Metop-C (EUMETSAT)), taken from processing centre 254
+! This entry is for satellite 5 (known as Metop-C), taken from processing centre 254 (EUMETSAT)
 !
 &GPSRO_ob_error
   satid = 5
@@ -459,7 +459,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 42 (known as TerraSAR-X (GFZ)), taken from processing centre 78
+! This entry is for satellite 42 (known as TerraSAR-X), taken from processing centre 78 (GFZ)
 !
 &GPSRO_ob_error
   satid = 42
@@ -534,7 +534,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 43 (known as TanDEM-X (GFZ)), taken from processing centre 78
+! This entry is for satellite 43 (known as TanDEM-X), taken from processing centre 78 (GFZ)
 !
 &GPSRO_ob_error
   satid = 43
@@ -609,7 +609,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 522 (known as FY-3C (CMA)), taken from processing centre 38
+! This entry is for satellite 522 (known as FY-3C), taken from processing centre 38 (CMA)
 !
 &GPSRO_ob_error
   satid = 522
@@ -684,7 +684,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 523 (known as FY-3D (CMA)), taken from processing centre 38
+! This entry is for satellite 523 (known as FY-3D), taken from processing centre 38 (CMA)
 !
 &GPSRO_ob_error
   satid = 523
@@ -759,7 +759,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 740 (known as COSMIC-1 FM1 (UCAR)), taken from processing centre 60
+! This entry is for satellite 740 (known as COSMIC-1 FM1), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 740
@@ -834,7 +834,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 741 (known as COSMIC-1 FM2(UCAR)), taken from processing centre 60
+! This entry is for satellite 741 (known as COSMIC-1 FM2), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 741
@@ -909,7 +909,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 742 (known as COSMIC-1 FM3 (UCAR)), taken from processing centre 60
+! This entry is for satellite 742 (known as COSMIC-1 FM3), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 742
@@ -984,7 +984,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 743 (known as COSMIC-1 FM4 (UCAR)), taken from processing centre 60
+! This entry is for satellite 743 (known as COSMIC-1 FM4), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 743
@@ -1059,7 +1059,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 744 (known as COSMIC-1 FM5 (UCAR)), taken from processing centre 60
+! This entry is for satellite 744 (known as COSMIC-1 FM5), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 744
@@ -1134,7 +1134,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 745 (known as COSMIC-1 FM6 (UCAR)), taken from processing centre 60
+! This entry is for satellite 745 (known as COSMIC-1 FM6), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 745
@@ -1209,7 +1209,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 825 (known as KOMPSAT-5 (UCAR)), taken from processing centre 60
+! This entry is for satellite 825 (known as KOMPSAT-5), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 825
@@ -1284,7 +1284,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 269 (known as Spire constellation), taken from processing centre 178
+! This entry is for satellite 269 (known as Spire), taken from processing centre 178 (SPIRE)
 !
 &GPSRO_ob_error
   satid = 269
@@ -1359,7 +1359,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 750 (known as COSMIC-2 E1 (UCAR)), taken from processing centre 60
+! This entry is for satellite 750 (known as COSMIC-2 E1), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 750
@@ -1434,7 +1434,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 751 (known as COSMIC-2 E2 (UCAR)), taken from processing centre 60
+! This entry is for satellite 751 (known as COSMIC-2 E2), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 751
@@ -1509,7 +1509,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 752 (known as COSMIC-2 E3 (UCAR)), taken from processing centre 60
+! This entry is for satellite 752 (known as COSMIC-2 E3), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 752
@@ -1584,7 +1584,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 753 (known as COSMIC-2 E4 (UCAR)), taken from processing centre 60
+! This entry is for satellite 753 (known as COSMIC-2 E4), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 753
@@ -1659,7 +1659,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 754 (known as COSMIC-2 E5 (UCAR)), taken from processing centre 60
+! This entry is for satellite 754 (known as COSMIC-2 E5), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 754
@@ -1734,7 +1734,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 755 (known as COSMIC-2 E6 (UCAR)), taken from processing centre 60
+! This entry is for satellite 755 (known as COSMIC-2 E6), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 755
@@ -1809,7 +1809,7 @@
   obs_errors = 0.128, 0.072, 0.010, 0.019, 0.179
 /
 !
-! This entry is for satellite 44 (known as PAZ (UCAR)), taken from processing centre 60
+! This entry is for satellite 44 (known as PAZ), taken from processing centre 60 (UCAR)
 !
 &GPSRO_ob_error
   satid = 44
