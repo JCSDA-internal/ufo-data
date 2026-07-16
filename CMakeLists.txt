@@ -8,7 +8,7 @@
 ################################################################################
 
 cmake_minimum_required( VERSION 3.12 )
-project( ufo-data VERSION 1.10.0 DESCRIPTION "UFO Test Files" )
+project( ufo-data VERSION 1.13.0 DESCRIPTION "UFO Test Files" )
 
 find_package( ecbuild QUIET )
 include( ecbuild_system NO_POLICY_SCOPE )
