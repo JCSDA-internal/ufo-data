@@ -1,0 +1,10 @@
+# Test compound list: trusted providers with subproviders
+_trusted: &trusted
+  - provider: ProvA
+    subprovider: all
+  - provider: ProvB
+    subprovider: Sub1
+  - provider: ProvC
+    subprovider: Sub2
+
+airTemperature: *trusted
