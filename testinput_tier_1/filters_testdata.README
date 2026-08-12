@@ -1,0 +1,126 @@
+netcdf filters_testdata {
+dimensions:
+	Location = UNLIMITED ; // (10 currently)
+variables:
+	int Location(Location) ;
+		Location:suggested_chunk_dim = 100LL ;
+
+// global attributes:
+		string :_ioda_layout = "ObsGroup" ;
+		:_ioda_layout_version = 0 ;
+		string :NCO = "netCDF Operators version 4.7.9 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)" ;
+		string :history = "Wed Oct  7 11:40:31 2020: ncks -4 filters_testdata.nc4 NETCDF4_FILES/filters_testdata.nc4" ;
+
+group: DerivedObsError {
+  variables:
+  	float airTemperature(Location) ;
+  		airTemperature:_FillValue = -3.368795e+38f ;
+  } // group DerivedObsError
+
+group: HofX {
+  variables:
+  	float variable1(Location) ;
+  		variable1:_FillValue = -3.368795e+38f ;
+  	float variable2(Location) ;
+  		variable2:_FillValue = -3.368795e+38f ;
+  	float variable3(Location) ;
+  		variable3:_FillValue = -3.368795e+38f ;
+  	float variable5(Location) ;
+  		variable5:_FillValue = -3.368795e+38f ;
+  } // group HofX
+
+group: MetaData {
+  variables:
+  	byte boolvar1(Location) ;
+  		boolvar1:_FillValue = 5b ;
+  	int64 dateTime(Location) ;
+  		dateTime:_FillValue = -9223372036854775801LL ;
+  		string dateTime:units = "seconds since 2018-01-01T00:00:00Z" ;
+  	int intvar1(Location) ;
+  		intvar1:_FillValue = -2147483643 ;
+  	int intvar2(Location) ;
+  		intvar2:_FillValue = -2147483643 ;
+  	int intvar3(Location) ;
+  		intvar3:_FillValue = -2147483643 ;
+  	int intvar4(Location) ;
+  		intvar4:_FillValue = -2147483643 ;
+  	int intvar5(Location) ;
+  		intvar5:_FillValue = -2147483643 ;
+  	float latitude(Location) ;
+  		latitude:_FillValue = -3.368795e+38f ;
+  	float longitude(Location) ;
+  		longitude:_FillValue = -3.368795e+38f ;
+  	string stationIdentification(Location) ;
+  		string stationIdentification:_FillValue = "" ;
+  	float var1(Location) ;
+  		var1:_FillValue = -3.368795e+38f ;
+  	float var2(Location) ;
+  		var2:_FillValue = -3.368795e+38f ;
+  	float var3(Location) ;
+  		var3:_FillValue = -3.368795e+38f ;
+  	float var4(Location) ;
+  		var4:_FillValue = -3.368795e+38f ;
+  	float var5(Location) ;
+  		var5:_FillValue = -3.368795e+38f ;
+  } // group MetaData
+
+group: ObsError {
+  variables:
+  	float variable1(Location) ;
+  		variable1:_FillValue = -3.368795e+38f ;
+  	float variable2(Location) ;
+  		variable2:_FillValue = -3.368795e+38f ;
+  	float variable3(Location) ;
+  		variable3:_FillValue = -3.368795e+38f ;
+  	float variable4(Location) ;
+  		variable4:_FillValue = 9.96921e+36f ;
+  } // group ObsError
+
+group: ObsValue {
+  variables:
+  	float variable1(Location) ;
+  		variable1:_FillValue = -3.368795e+38f ;
+  	float variable2(Location) ;
+  		variable2:_FillValue = -3.368795e+38f ;
+  	float variable3(Location) ;
+  		variable3:_FillValue = -3.368795e+38f ;
+  	float variable4(Location) ;
+  		variable4:_FillValue = 9.96921e+36f ;
+  	float variable5(Location) ;
+  		variable5:_FillValue = -3.368795e+38f ;
+  } // group ObsValue
+
+group: TestReference {
+  variables:
+  	byte falses(Location) ;
+  		falses:_FillValue = 5b ;
+  	byte trues(Location) ;
+  		trues:_FillValue = 5b ;
+  	int zeroes(Location) ;
+  		zeroes:_FillValue = -2147483643 ;
+  	int ones(Location) ;
+  		ones:_FillValue = -2147483643 ;
+  	int twos(Location) ;
+  		twos:_FillValue = -2147483643 ;
+  	int threes(Location) ;
+  		threes:_FillValue = -2147483643 ;
+  	float variable1_inflatederror_factor(Location) ;
+  		variable1_inflatederror_factor:_FillValue = -3.368795e+38f ;
+  	float variable1_inflatederror_var(Location) ;
+  		variable1_inflatederror_var:_FillValue = -3.368795e+38f ;
+  	float variable2_inflatederror_factor(Location) ;
+  		variable2_inflatederror_factor:_FillValue = -3.368795e+38f ;
+  	float variable2_inflatederror_var(Location) ;
+  		variable2_inflatederror_var:_FillValue = -3.368795e+38f ;
+  	float variable3_inflatederror_factor(Location) ;
+  		variable3_inflatederror_factor:_FillValue = -3.368795e+38f ;
+  	float variable3_inflatederror_var(Location) ;
+  		variable3_inflatederror_var:_FillValue = -3.368795e+38f ;
+  } // group TestReference
+
+group: DerivedObsValue {
+  variables:
+  	float variable5(Location) ;
+  		variable5:_FillValue = -3.368795e+38f ;
+  } // group DerivedObsValue
+}
