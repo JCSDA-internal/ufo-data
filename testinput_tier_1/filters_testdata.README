@@ -74,6 +74,8 @@ group: ObsError {
   		variable3:_FillValue = -3.368795e+38f ;
   	float variable4(Location) ;
   		variable4:_FillValue = 9.96921e+36f ;
+  	float variable5(Location) ;
+  		variable5:_FillValue = -3.368795e+38f ;
   } // group ObsError
 
 group: ObsValue {
