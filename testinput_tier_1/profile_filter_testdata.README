@@ -1,0 +1,56 @@
+netcdf profile_filter_testdata {
+dimensions:
+	Location = 100 ;
+variables:
+	int Location(Location) ;
+		Location:suggested_chunk_dim = 100LL ;
+
+// global attributes:
+		string :_ioda_layout = "ObsGroup" ;
+		:_ioda_layout_version = 0 ;
+		:description = "Test data for profile background filter" ;
+		:history = "Wed Apr 10 16:32:37 2024: ncrename -v .sensorChannelNumber,Channel ./profile_filter_testdata.nc4 ./data2/profile_filter_testdata.nc4" ;
+		:NCO = "netCDF Operators version 5.1.6 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)" ;
+
+group: DiagnosticFlags {
+
+  group: LevelSubsampleReject {
+    variables:
+    	byte variable(Location) ;
+    		variable:_FillValue = 5b ;
+    } // group LevelSubsampleReject
+  } // group DiagnosticFlags
+
+group: HofX {
+  variables:
+  	float variable(Location) ;
+  		variable:_FillValue = 9.96921e+36f ;
+  } // group HofX
+
+group: MetaData {
+  variables:
+  	int64 dateTime(Location) ;
+  		dateTime:_FillValue = -2208988800LL ;
+  		string dateTime:units = "seconds since 1970-01-01T00:00:00Z" ;
+  	float latitude(Location) ;
+  		latitude:_FillValue = 9.96921e+36f ;
+  	float longitude(Location) ;
+  		longitude:_FillValue = 9.96921e+36f ;
+  	int ordering(Location) ;
+  		ordering:_FillValue = -2147483647 ;
+  	int sequenceNumber(Location) ;
+  		sequenceNumber:_FillValue = -2147483647 ;
+  } // group MetaData
+
+group: ObsError {
+  variables:
+  	float variable(Location) ;
+  		variable:_FillValue = 9.96921e+36f ;
+  } // group ObsError
+
+group: ObsValue {
+  variables:
+  	float variable(Location) ;
+  		variable:_FillValue = 9.96921e+36f ;
+  } // group ObsValue
+}
